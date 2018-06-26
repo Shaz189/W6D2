@@ -18,3 +18,5 @@ function completion() {
     }
   });
 };
+
+// const num = $('ul > li').index($li);

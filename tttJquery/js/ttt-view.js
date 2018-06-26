@@ -13,8 +13,10 @@ class View {
     const $li = $(event.currentTarget);
     const num = $('ul > li').index($li);
     const pos = [Math.floor(num/3), num % 3];
+
+    const player = this.game.currentPlayer
     this.game.playMove(pos);
-    $li.text(`${this.game.currentPlayer}`);
+    $li.text(`${player}`);
     $li.removeClass("unchecked");
     $li.addClass("checked");
     if(this.game.winner()) {
